@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traducteur Français - Kiluba</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+  <div class="container">
+    <div class="container">
+    <form action=""> 
+    <h1 data-i18n="title">APPRENONS LE KILUBA</h1>
+    <h1 data-i18n="welcome">Traducteur Français → Kiluba</h1>
+    <input type="text" id="search" placeholder="Tape un mot en français...">
+    <div id="result"></div>
+  </form>  
+  </div><br><br>
+  <script src="script.js"></script>
+  <h1 data-i18n="muluba">QUI EST UN MULUBA ?</h1>
+  <div class="container">
+  <form action="">
+  Un <strong>Muluba-Katanga</strong> (souvent appelé Muluba-Kati) est une personne appartenant au peuple Baluba du Katanga, une branche du grand groupe ethnique Luba. <br><br>
+
+Voici quelques précisions : <br>
+- <strong>Langue parlée:</strong> le Kiluba (aussi appelé Tshiluba du Katanga). <br>
+- <strong>Région d’origine :</strong> principalement le Haut-Katanga, notamment autour de <strong>Kamina, Bukama, Malemba-Nkulu,</strong> etc. <br>
+- Les Muluba-Kati sont différents des Baluba du Kasaï, qui parlent aussi le tshiluba, mais avec des variantes régionales. <br><br>
+
+Donc, oui, une personne qui parle Kiluba (surtout celui du Katanga) est généralement <strong>un Muluba-Kati.</strong> <br><br>
+Le royaume Luba s'étend rapidement, atteignant des régions qui correspondent aujourd'hui au sud du Kasaï, à l'est de l'Angola, au nord de la Zambie et à l'ouest de la Tanzanie. Cette expansion a donné naissance à plusieurs branches du peuple Luba, dont : <br><br>
+
+- <strong>Luba-Katanga</strong> (ou Luba-Kati) : établis dans le Haut-Katanga. <br>
+- <strong>Luba-Kasaï :</strong> installés dans les régions du Kasaï. <br>
+- <strong>Luba-Shankadi :</strong> présents dans l'ouest du Shaba. <br>
+
+Chaque groupe a conservé des éléments communs tout en développant des spécificités culturelles. 
+  </form>
+  </div><br>
+    <footer>
+  <div class="foot">
+    <div class="foo">
+      <div class="fo">
+        <a href="index.html">ACCEUIL</a><br>
+        <a href="histoire.html">HISTOIRE DE BALUBA</a><br>
+    <a href="chefferie.html">CHEFFERIES</a><br>
+    <a href="expres.html">EXPRESSIONS</a><br>
+     <a href="proverbes.html">PROVERBES LUBA</a><br>
+     <a href="culture.html">NOTRE CULTURE</a><br>
+     <a href="musique.html">NOS CHASONS</a><br>
+     <a href="image.html">NOS IMAGES</a><br>
+     <a href="video.html">NOS VIDEOS</a><br>
+     <a href="mission.html">NOTRE MISSION</a><br>
+     <a href="connexion.html">CONNECTEZ VOUS</a><br>
+     <div class="lang"><label for="langSwitch">LANGUE :</label>
+     <select id="langSwitch" class="lang-select">
+  <option value="fr">Français</option>
+  <option value="lu">Kiluba</option>
+</select>
+</div>
+ <h3>CONTACTEZ-NOUS</h3>
+  <div class="social">
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
+  <a href="https://wa.me/243977510025" target="_blank" style="text-decoration: none; margin: 10px;">
+    <button style="padding: 12px 20px; background-color: #25D366; color: white; border: none; border-radius: 6px; font-family: georgia;">WhatsApp</button>
+  </a>
+
+  <a href="https://facebook.com/ManFørd øfficiel" target="_blank" style="text-decoration: none; margin: 10px;">
+    <button style="padding: 12px 20px; background-color: #3b5998; color: white; border: none; border-radius: 6px; font-family: georgia;">Facebook</button>
+  </a>
+
+  <a href="mailto:mannymbuya1@gmail.com" style="text-decoration: none; margin: 10px;">
+    <button style="padding: 12px 20px; background-color: #dd4b39; color: white; border: none; border-radius: 6px; font-family: georgia;">Email</button>
+  </a>
+</div>
+     </div>
+    </div>
+ </div>
+ <p>@APPRENONS LE KILUBA, TOUT DROIT RESERVER 2025  <br> MANFORD OFFICIEL, LUBUMBASHI, DRC <br>mannymbuya1@gmail.com </p>
+</footer>
+  </div>
+  <br><br>
+<script>const translations = {
+  fr: {
+    title: "APPRENONS ENSEMBLE LE KILUBA",
+    welcome: "Traducteur Français → Kiluba",
+    muluba: "QUI EST UN MULUBA ? "
+  },
+  lu: {
+    title: "FUNDA NETU PAMO KILUBA",
+    welcome: "kwalamuna falanse → Kiluba",
+    muluba: "ABE MULUBA, LE WI ANI ?"
+  }
+};
+
+function updateLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(elem => {
+    const key = elem.getAttribute("data-i18n");
+    elem.textContent = translations[lang][key] || key;
+  });
+}
+
+document.getElementById("langSwitch").addEventListener("change", function () {
+  updateLanguage(this.value);
+});
+</script>
+</body>
+</html>
